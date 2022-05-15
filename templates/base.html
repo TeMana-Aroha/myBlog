@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>{{ config.title }}</title>
+        <meta name="description" content="{{ config.description }}">
+        <meta name="author" content="{{ config.extra.author }}">
+
+        <meta name="og:url" content="{{ config.base_url }}">
+        <meta name="og:type" content="website">
+        <meta name="og:title" content="{{ config.title }}">
+        <meta name="og:description" content="{{ config.description }}">
+        <meta name="og:image" content="https://via.placeholder.com/1200x627.png?text=Zola+Template+Site+og">
+        <meta name="og:image:width" content="1200">
+        <meta name="og:image:height" content="627">
+
+        <meta name="twitter:url" content="{{ config.base_url }}">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:creator" content="{{ config.extra.twitter_handle }}">
+        <meta name="twitter:title" content="{{ config.title }}">
+        <meta name="twitter:description" content="{{ config.description }}">
+        <meta name="twitter:image" content="https://via.placeholder.com/1280x675.png?text=Zola+Template+Site+Twitter+Card">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <link rel="manifest" href="site.webmanifest">
+
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="styles.css">
+
+        {% block head %}{% endblock %}
+
+        <script src="https://kit.fontawesome.com/37ce712ed0.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <a href="/">
+                    <img src="https://via.placeholder.com/200x200.png?text=ZT">
+                </a>
+            </div>
+        </header>
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+        <footer>
+            <div class="copyright">© {{ now() | date(format="%Y") }} YOUR NAME - All rights reserved</div>
+        </footer>
+    </body>
+</html>

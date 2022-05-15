@@ -1,0 +1,36 @@
+body {
+    background-color: #181A1B;
+    height: 100vh;
+}
+
+p {
+    color: white;
+}
+
+.copyright {
+    color: white;
+}
+
+header {
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65vh;
+    /* flex-grow: 1; */
+}
+
+footer {
+    width: 100vw;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    margin-top: 100px;
+}
